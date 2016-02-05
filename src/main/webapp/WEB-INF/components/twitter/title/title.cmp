@@ -1,0 +1,6 @@
+<aura:component>
+    <div class="page">
+        <h1 class="myTitle" >A TWITTER THING</h1>
+        <h2>Still a thing</h2>
+    </div>
+</aura:component>
