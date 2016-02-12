@@ -1,3 +1,7 @@
 <aura:event type="APPLICATION">
-    <aura:attribute name="text" type="String"/>
+    <!-- <aura:attribute name="text" type="String"/> -->
+    <aura:attribute name="name" type="String" />
+    <aura:attribute name="message" type="String" />
+    <aura:attribute name="date" type="String" />
+    <aura:attribute name="imageUrl" type="String" />
 </aura:event>

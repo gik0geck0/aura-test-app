@@ -1,5 +1,25 @@
 <aura:component >
+    <aura:handler name="init" action="{!c.init}" value="{!this}" />
     <aura:handler event="phoneTest:phoneMessage" action="{!c.receiveMessage}" />
+
+    <!--
+    tweet:
+        message: String,
+        name: String,
+        imageUrl: String,
+        date: String
+    -->
+    <aura:attribute name="history" type="Object[]"/>
+
+    <aura:iteration items="{!v.history}" var="aTweet">
+        <h1 class="slds">{!aTweet.name}</h1>
+        <h2>{!aTweet.message}</h2>
+        <h3>{!aTweet.imageUrl}</h3>
+        <h4>{!aTweet.date}</h4>
+    </aura:iteration>
+
+    <!-- OLD: Single number
     <aura:attribute name="number" type="String" default="No Phone Number"/>
     <ui:outputText aura:id="phone" value="{!v.number}"/>
+    -->
 </aura:component>
