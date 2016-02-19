@@ -1,0 +1,4 @@
+<aura:component>
+    I'm the homepage
+    <a href="{!'homepage.app#profile?userid='+4}" >go to profile</a>
+</aura:component>

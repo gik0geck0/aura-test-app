@@ -1,4 +1,4 @@
-<aura:component >
+<aura:component controller="java://ui.twitter.HomepageController">
     <aura:handler name="init" action="{!c.init}" value="{!this}" />
     <aura:handler event="phoneTest:phoneMessage" action="{!c.receiveMessage}" />
 
@@ -22,4 +22,13 @@
     <aura:attribute name="number" type="String" default="No Phone Number"/>
     <ui:outputText aura:id="phone" value="{!v.number}"/>
     -->
+
+    <div class="panel panel-default" >
+        <div class="panel-heading" >
+            Panel 3 header
+        </div>
+        <div class="panel-body" >
+            Panel 3
+        </div>
+    </div>
 </aura:component>

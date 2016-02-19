@@ -1,0 +1,15 @@
+<aura:component >
+    <aura:handler event="aura:locationChange" action="{!c.onLocationChange}" />
+
+    <aura:attribute name="route" type="String" description="Regex that when matches the current location, will reveal the body" />
+    <aura:attribute name="component" type="String" description="namespace:componentName of the component to show when the route matches" />
+
+    {!v.body}
+    <!--
+    <aura:attribute name="matches" type="Boolean" access="private" description="Evaluated value for whether the route matches" />
+
+    <aura:if isTrue="{!v.matches}" >
+    {!v.body}
+    </aura:if>
+    -->
+</aura:component>

@@ -1,0 +1,4 @@
+<aura:component>
+    <aura:attribute name="userid" type="String" />
+    I'm the profile for {!v.userid}
+</aura:component>

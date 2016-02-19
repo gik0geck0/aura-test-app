@@ -7,6 +7,18 @@
             "message": "First tweet!",
             "imageUrl": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
         }]);
+
+        // Ping the server
+        var action = component.get("c.getAppName");
+        action.setParams({
+            appKey: "TestApp"
+        });
+        action.setCallback(this, function(response) {
+            if (response.getState() === "SUCCESS") {
+                console.log("Server responded: " + response.getReturnValue());
+            }
+        });
+        $A.enqueueAction(action);
     },
     receiveMessage : function(component, event, helper) {
         // Logs a message to the console
