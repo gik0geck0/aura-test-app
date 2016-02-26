@@ -11,11 +11,16 @@
         // Ping the server
         var action = component.get("c.getAppName");
         action.setParams({
-            appKey: "TestApp"
+            appKey: "TestApp",
+            exTweet: {
+                name: "Bob",
+                message: "Happy Birthday",
+                date: "Today"
+            }
         });
         action.setCallback(this, function(response) {
             if (response.getState() === "SUCCESS") {
-                console.log("Server responded: " + response.getReturnValue());
+                console.log("Server responded: " + JSON.stringify(response.getReturnValue()));
             }
         });
         $A.enqueueAction(action);
