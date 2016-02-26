@@ -14,8 +14,15 @@ public class HomepageController {
     @AuraEnabled
     public Tweet getAppName(@Key("appKey") String importantInfo) throws Exception {
     	
+    		Class.forName("org.postgresql.Driver");
 		Class.forName("org.h2.Driver");
 		Connection conn = DriverManager.getConnection("jdbc:h2:~/test");
+		/*
+		Connection conn = DriverManager.getConnection("jdbc:postgresql://ec2-54-83-3-38.compute-1.amazonaws.com:5432/d7mq9gdg5smnr3?sslmode=require",
+				System.getProperty("dbun"),
+				System.getProperty("dbpw")
+			);
+		*/
 		
 		boolean dropResult = conn.prepareStatement("DROP TABLE IF EXISTS testTable").execute();
 		boolean createResult = conn.prepareStatement("CREATE TABLE testTable (ID INT PRIMARY KEY, NAME VARCHAR(255) )").execute();
