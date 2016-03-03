@@ -1,0 +1,14 @@
+<aura:component >
+	<aura:attribute name="tweetList" type="Object[]" />
+
+    <div class="panel panel-default" >
+        <div class="panel-heading" >
+        		All Tweets
+        </div>
+        <div class="panel-body" >
+        		<aura:iteration items="{!v.tweetList}" var="tweet" >
+        			<twitter:tweetListItem tweet="{!tweet}" />
+        		</aura:iteration>
+        </div>
+    </div>
+</aura:component>

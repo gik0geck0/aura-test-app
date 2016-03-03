@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan("ui.twitter")
 public class TwitterSpringConfiguration {
 	@Bean
-	DatabasePoolService dbPoolProvider() {
+	DatabasePoolService dbPoolProvider() throws Exception {
 		System.out.println("Starting a Database Pool Service");
 		return new DatabasePoolService();
 	}

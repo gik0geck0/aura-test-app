@@ -1,0 +1,14 @@
+<aura:component>
+	<aura:attribute name="tweet" type="Object" required="true" />
+
+    <div class="panel panel-default" >
+        <div class="panel-body" >
+        		<h3>{!v.tweet.name}</h3>
+        		<div class="message" >{!v.tweet.message}</div>
+        		<aura:if isTrue="{!v.tweet.imageUrl}" >
+					<img href="{!v.tweet.imageUrl}" />
+        		</aura:if>
+        		<div class="date" >{!v.tweet.date}</div>
+        </div>
+    </div>
+</aura:component>
