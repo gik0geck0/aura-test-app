@@ -14,19 +14,19 @@ import org.apache.http.util.EntityUtils;
 /**
  * Test to verify HTTP response of generated simple aura application
  */
-public class AppTest extends TestCase {
+public class AppIT extends TestCase {
 
-    public AppTest() {
+    public AppIT() {
         super();
     }
 
-    public AppTest(String name) {
+    public AppIT(String name) {
         super(name);
     }
 
     public void testApp() throws Exception {
         DefaultHttpClient http = new DefaultHttpClient();
-        HttpGet get = new HttpGet("http://localhost:8080/aura-test-app/aura-test-app.app");
+        HttpGet get = new HttpGet("http://localhost:8080/auraTestApp/auraTestApp.app");
 
         HttpParams params = get.getParams();
         HttpClientParams.setRedirecting(params, true);
@@ -38,7 +38,7 @@ public class AppTest extends TestCase {
         if (entity == null) {
             fail("Project page should have response");
         } else {
-            assertTrue("Hello response is wrong", EntityUtils.toString(entity).contains("hello web, from the Aura sample app aura-test-app"));
+            assertTrue("Hello response is wrong", EntityUtils.toString(entity).contains("Hello web, from the Aura sample app aura-test-app"));
         }
     }
 }
