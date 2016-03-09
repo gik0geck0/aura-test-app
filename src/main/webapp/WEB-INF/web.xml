@@ -98,8 +98,8 @@
     </filter>
 
     <filter-mapping>
-        <url-pattern>/l/*</url-pattern>
         <filter-name>AuraResourceRewriteFilter</filter-name>
+        <url-pattern>/l/*</url-pattern>
     </filter-mapping>
 
     <servlet>
