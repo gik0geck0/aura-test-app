@@ -1,4 +1,4 @@
-<aura:component controller="java://ui.twitter.HomepageController" >
+<aura:component controller="java://ui.twitter.components.HomepageController" >
 	<aura:attribute name="tweets" type="Object[]" />
 	
 	<aura:handler name="init" value="{!this}" action="{!c.init}" />

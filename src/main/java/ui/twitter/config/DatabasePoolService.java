@@ -1,4 +1,4 @@
-package ui.twitter;
+package ui.twitter.config;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class DatabasePoolService {
 	
-	DatabasePoolService() throws Exception {
+	DatabasePoolService() throws ClassNotFoundException {
 		start();
 	}
 
