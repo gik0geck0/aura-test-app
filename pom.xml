@@ -10,14 +10,21 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <aura.version>0.3660</aura.version>
+        <aura.version>0.3882</aura.version>
     </properties>
 
     <repositories>
+        <!-- Because sometimes maven.auraframework.org -->
+        <repository>
+            <id>apache-maven</id>
+            <url>http://repo.maven.apache.org</url>
+        </repository>
+        <!--
         <repository>
             <id>libs-internal</id>
             <url>http://maven.auraframework.org/libs-release</url>
         </repository>
+        -->
 
         <repository>
             <id>libs</id>
