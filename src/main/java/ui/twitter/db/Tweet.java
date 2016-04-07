@@ -1,17 +1,36 @@
-package ui.twitter.components;
+package ui.twitter.db;
 
 import java.io.IOException;
-import java.io.Serializable;
-import java.sql.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 import org.auraframework.util.json.Json;
 import org.auraframework.util.json.JsonSerializable;
 
+@Entity
+@Table(name = "Tweets", schema="public")
 public class Tweet implements JsonSerializable {
-	public String message;
-	public String name;
-	public String imageUrl;
-	public String date;
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private long id;
+	public long getId() { return id; }
+
+	private String message;
+	public String getMessage() { return message; }
+
+	private String name;
+	public String getName() { return name; }
+
+	private String imageUrl;
+	public String getImageUrl() { return imageUrl; }
+
+	private String date;
+	public String getDate() { return date; }
 	
 	Tweet(String message, String name, String imageUrl, String date) {
 		this.message = message;
